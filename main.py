@@ -6,15 +6,16 @@ import hashlib
 import hmac
 import requests
 from pydub import AudioSegment
-from config import (
-    ACR_ACCESS_KEY,
-    ACR_ACCESS_SECRET,
-    ACR_HOST,
-    INPUT_MIX,
-    TRACK_TIMES_MS,
-    DOWNLOAD_FOLDER,
-    SPLIT_INTERVAL_MINUTES
-)
+
+# Config
+ACR_HOST ='https://identify-us-west-2.acrcloud.com/v1/identify'
+ACR_ACCESS_KEY ='assess key'
+ACR_ACCESS_SECRET = 'assess secret key'
+INPUT_MIX ='mix.mp3'
+TRACK_TIMES_MS =[]  
+DOWNLOAD_FOLDER ='Downloads'
+SPLIT_INTERVAL_MINUTES = 3  # fallback if TRACK_TIMES_MS is None
+
 
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
 
